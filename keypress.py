@@ -1,6 +1,10 @@
 import pyautogui
 import time
 
-time.sleep(2)  # Wait to switch windows
-pyautogui.write('Hello!', interval=0.1)
-pyautogui.press('enter')
+try:
+    while True:
+        pyautogui.press('shift')  # Simulates a key press
+        print("Pressed Shift to prevent idling.")
+        time.sleep(300)  # Waits 5 minutes (300 seconds)
+except KeyboardInterrupt:
+    print("Stopped.")
